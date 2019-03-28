@@ -34,8 +34,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view)
             {
                 String email = edtEmail.getText().toString();
+                String password = edtPassword.getText().toString();
 
                 Toast.makeText( MainActivity.this,email,Toast.LENGTH_SHORT).show();
+                if(email.equals("admin123@gmail.com") && password.equals( "123"))
+                {
+                    lblmsg.setText("login successful");
+                }
+                else
+                {
+                    lblmsg.setText("login failed");
+                }
             }
         });
 
