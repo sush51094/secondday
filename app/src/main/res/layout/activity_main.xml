@@ -23,6 +23,8 @@
         android:id="@+id/edtEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:drawableStart="@android:drawable/ic_dialog_email"
+        android:drawablePadding="5dp"
         android:ems="10"
         android:hint="Enter Email Id"
         android:inputType="textEmailAddress"
@@ -32,6 +34,8 @@
         android:id="@+id/edtPassword"
         android:layout_width="match_parent"
         android:layout_height="64dp"
+        android:drawableStart="@drawable/ic_password"
+        android:drawablePadding="5dp"
         android:ems="10"
         android:hint="Enter Pssword"
         android:inputType="textPassword" />

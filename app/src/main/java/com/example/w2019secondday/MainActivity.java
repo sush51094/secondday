@@ -1,5 +1,6 @@
 package com.example.w2019secondday;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 if(email.equals("admin123@gmail.com") && password.equals( "123"))
                 {
                     lblmsg.setText("login successful");
+
                 }
                 else
                 {
