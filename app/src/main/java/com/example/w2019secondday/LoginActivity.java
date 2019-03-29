@@ -1,5 +1,6 @@
 package com.example.w2019secondday;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,7 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     private EditText edtEmail;
     private EditText edtPassword;
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_Login);
 
         edtEmail = findViewById(R.id.edtEmail);
         edtPassword = findViewById(R.id.edtPassword);
@@ -37,10 +38,16 @@ public class MainActivity extends AppCompatActivity {
                 String email = edtEmail.getText().toString();
                 String password = edtPassword.getText().toString();
 
-                Toast.makeText( MainActivity.this,email,Toast.LENGTH_SHORT).show();
+                Toast.makeText( LoginActivity.this,email,Toast.LENGTH_SHORT).show();
                 if(email.equals("admin123@gmail.com") && password.equals( "123"))
                 {
                     lblmsg.setText("login successful");
+                    lblmsg.setTextColor(Color.GREEN);
+                    Intent mIntent = new Intent(LoginActivity.this,HomeActivity.class);
+                    mIntent.putExtra("name","sushmitha");
+                    startActivity(mIntent);
+
+
 
                 }
                 else
