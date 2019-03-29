@@ -12,12 +12,13 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         Bundle mBundle = getIntent().getExtras();
-        if(mBundle != null)
-        {
-            String name = mBundle.getString("name");
-            Toast.makeText(this,name,Toast.LENGTH_LONG).show();
+        if (mBundle != null) {
+            if (mBundle.containsKey("name")) {
+                String name = mBundle.getString("name");
+                Toast.makeText(this, name, Toast.LENGTH_LONG).show();
+            }
+
+
         }
-
-
     }
 }
